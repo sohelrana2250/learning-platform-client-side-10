@@ -1,8 +1,35 @@
-import React from 'react';
+
+
+import { useContext } from 'react';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+
+
+import './CourseDetails.css'
+
 
 const CourseDetails = () => {
+
+
+
+
+
+
+
+
+    const { info } = useContext(AuthContext);
+    console.log(info);
+
+
+
+
+
+
     return (
-        <div>
+        <div className='m-3'>
+
+
+            <h1>sohel</h1>
+
 
         </div>
     );

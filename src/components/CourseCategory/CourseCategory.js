@@ -30,7 +30,7 @@ const CourseCategory = () => {
             <Button className='mt-3 fs-3 mb-3' variant="outline-danger">Course-Category</Button>
             {
                 course.map((v, index) => <p key={index}>
-                    <Link className='category' to={`/category/:${v.id}`}><b>{v.CourseName}</b></Link>
+                    <Link className='category' to={`/courseDetails/:${v.id}`}><b>{v.CourseName}</b></Link>
                 </p>)
 
 
