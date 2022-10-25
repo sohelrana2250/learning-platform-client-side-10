@@ -1,0 +1,15 @@
+.category {
+
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(29, 25, 25);
+}
+
+.category:hover {
+
+    background-color: tomato;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+
+}
