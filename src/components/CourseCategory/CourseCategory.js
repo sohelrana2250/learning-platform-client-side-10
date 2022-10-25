@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './CourseCategory.css';
+import { FaCheck } from "react-icons/fa";
 
 
+//FaCheck
 const CourseCategory = () => {
 
     const [course, setCourse] = useState([]);
@@ -30,7 +32,7 @@ const CourseCategory = () => {
             <Button className='mt-3 fs-3 mb-3' variant="outline-danger">Course-Category</Button>
             {
                 course.map((v, index) => <p key={index}>
-                    <Link className='category' to={`/courseDetails/:${v.id}`}><b>{v.CourseName}</b></Link>
+                    <Link className='category' to={`/courseDetails/:${v.id}`}> <FaCheck></FaCheck>   <b>{v.CourseName}</b></Link>
                 </p>)
 
 

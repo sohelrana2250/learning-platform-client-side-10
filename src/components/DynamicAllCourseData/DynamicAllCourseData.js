@@ -1,15 +1,16 @@
-
+import React from 'react';
 import { useLoaderData, Link } from 'react-router-dom';
-import './CourseDetails.css'
-import { Button, Card, Image, ListGroup } from 'react-bootstrap';
+import { Card, Image, ListGroup, Button } from 'react-bootstrap';
 import { FaBackward } from "react-icons/fa";
 
-const CourseDetails = () => {
+const DynamicAllCourseData = () => {
 
 
-    const courseDetais = useLoaderData();
-    console.log(courseDetais);
-    const { CourseHeader, CourseTopic, courseBody, image } = courseDetais;
+
+    const dynamicDetails = useLoaderData();
+    console.log(dynamicDetails);
+
+    const { CourseHeader, CourseTopic, courseBody, image } = dynamicDetails;
 
     const studyStep = CourseTopic.map((v, index) => {
 
@@ -35,10 +36,10 @@ const CourseDetails = () => {
                     </Card.Text>
 
                 </Card.Body>
-                <Card.Footer className="text-muted">  <Link to='/courses'><Button className='fs-4' variant="outline-danger"> <FaBackward></FaBackward>  Go To Course-Details-Page</Button></Link>   </Card.Footer>
+                <Card.Footer className="text-muted">  <Link to='/'><Button className='fs-4' variant="outline-danger"> <FaBackward></FaBackward>  Go To Font Page</Button></Link>   </Card.Footer>
             </Card>
         </div>
     );
 };
 
-export default CourseDetails;
+export default DynamicAllCourseData;
