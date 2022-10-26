@@ -1,10 +1,12 @@
 import React from 'react';
 import { Card, Image, ListGroup, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './HomeDetails.css';
+import { FaBackward } from "react-icons/fa";
 
 const HomeDetails = (props) => {
 
-    const { CourseHeader, CourseTopic, courseBody, image } = props.details;
+    const { id, CourseHeader, CourseTopic, courseBody, image } = props.details;
 
 
 
@@ -34,7 +36,7 @@ const HomeDetails = (props) => {
                     </Card.Title>
 
                 </Card.Body>
-                <Card.Footer className="text-muted" ><Button variant="outline-danger">Subscribtion</Button></Card.Footer>
+                <Card.Footer className="text-muted" ><Link to={`/AllCourse/:${id}`}><Button className='fs-4' variant="outline-danger"> < FaBackward ></FaBackward>  Get premium access</Button></Link></Card.Footer>
             </Card>
         </div>
     );
