@@ -11,6 +11,7 @@ import Login from './components/Logain/Login';
 import Register from './components/Register/Register';
 import PrivateRouter from './components/PrivateRouter/PrivateRouter';
 import Blog from './components/BLOG/Blog';
+import DefaultError from './components/DefaultError/DefaultError';
 
 
 
@@ -62,6 +63,9 @@ function App() {
 
       ]
 
+    },
+    {
+      path: '*', element: <DefaultError></DefaultError>
     }
 
   ])

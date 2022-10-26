@@ -1,3 +1,42 @@
+
+
+# My Project Decription
+My Project Name is Kahoot-Eduction-Zone.this project client size and server side both are exist.Client size 6 course iinformation exist .I have to be used my project private router,login page,Register Page,and Blog----> which is the involve question section ---> and Answer 
+
+# b610-learning-platform-server-side
+I have to be used fake data my server side API Creation. I was develop my server site Express JS and My server deploy with vercel..........
+Here is my vercel deployment link......
+https://b610-lerning-platform-server-side-one.vercel.app/CourseDetails --->Course details this link. 
+
+https://b610-lerning-platform-server-side-one.vercel.app/CourseInfo  -->Course id ,name exist this link.
+ both link co-releted each  other.
+
+# b610-learning-platform-Client-side
+
+1. My Weeb side developing part is javaScript, express js with server create,React Js font end  and Some HTML AND CSSS .... MOst of the time I have to used React Bootstarp
+
+2. Firebase Authengation with logain page and Register page ----> 3 typs of login process exist  i) craete User ii) Login with-Google iii) Login-With-GitHub
+
+3. Registration page i was used my side Email Authentgation and error display and etc.
+
+4. Enviroment variable used my web site ..... with fire base security provide
+
+5. private Router used Courses deatis data access point ....... if Course details need you will login first.........  premimun access but private 
+
+# Header and Footer
+
+Each and every page Header and Footer Exist.
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
