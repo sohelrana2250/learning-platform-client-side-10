@@ -68,11 +68,13 @@ const Blog = () => {
                                 <Accordion.Header>How does the private route work?</Accordion.Header>
                                 <Accordion.Body>
                                     <Card.Text className='fs-5'>
-                                        Use useRef if you need to manage focus, text selection, trigger imperative animations or integrating third-party libraries.
 
-                                        useRef returns a mutable ref object whose .current property is initialized to the passed argument  initialValue. The returned object will persist for the full lifetime of the component. Essentially, useRef is like a “box” that can hold a mutable value in its .current property.
 
-                                        useRef can be used to store local mutable value in a component. It doesn't participate in rerendering (unline state data). useMemo is used to memoize (like we do in Dynamic Programming, concept wise) and skip recalculation.
+                                        The private route component is similar to the public route, the only change is that redirect URL and authenticate condition. If the user is not authenticated he will be redirected to the login page and the user can only access the authenticated routes If he is authenticated
+
+                                        <Card.Text>
+                                            Protected routes are those routes that only grant access to authorized users. This means that users must first meet certain conditions before accessing that specific route. For instance, your application can require only logged-in users be able to visit the dashboard page.
+                                        </Card.Text>
                                     </Card.Text>
 
 
