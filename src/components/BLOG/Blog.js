@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Accordion } from 'react-bootstrap';
+import CardHeader from 'react-bootstrap/esm/CardHeader';
 import './Blog.css'
 
 const Blog = () => {
@@ -28,12 +29,9 @@ const Blog = () => {
                                 <Accordion.Header> what is cors?</Accordion.Header>
                                 <Accordion.Body>
                                     <Card.Text className='fs-5'>
-                                        The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to "prop drilling" or moving props from grandparent to child to parent, and so on.
+                                        CORS stands for Cross-Origin Resource Sharing . It allows us to relax the security applied to an API. This is done by bypassing the Access-Control-Allow-Origin headers, which specify which origins can access the API.
 
-                                        1. Context API is introduced in React 16.3. The Context API is used to share the data with multiple components, without having to pass data through props manually. The React Context API allows us to produce the global data and share it across the application.
-
-                                        2.What is context in React? React's context allows you to share information to any component, by storing it in a central place and allowing access to any component that requests it usually you are only able to pass data from parent to child via props.
-
+                                        <Card.Text>Cross-Origin Resource Sharing CORS is an HTTP-header based mechanism that allows a server to indicate any origins domain, scheme, or port other than its own from which a browser should permit loading resources.Run the server with npm nodemon . Navigate to http://localhost:6069/ingredients on your browser. You will be served with these ingredients text items. In this example, cross-origin is allowed because you're currently on the same domain, and you are executing this request from the same domain.</Card.Text>
                                     </Card.Text>
                                 </Accordion.Body>
                             </Accordion.Item>
