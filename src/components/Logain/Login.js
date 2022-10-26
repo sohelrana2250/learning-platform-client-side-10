@@ -2,10 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { FaGoogle, FaGithub } from "react-icons/fa";
+
+
+
 const Login = () => {
 
     const [error, setError] = useState(null);
-    const { SingInUser } = useContext(AuthContext);
+    const { SingInUser, googleLogin, GithubLogin } = useContext(AuthContext);
     const [login, setLogain] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
@@ -32,8 +36,36 @@ const Login = () => {
             setError(error.message);
         })
 
+    }
 
+    const handelGoogleSignIn = () => {
 
+        googleLogin().then((result) => {
+
+            const user = result.user;
+            console.log(user);
+            setLogain(true);
+            setError('');
+            navigate(form, { replace: true });
+        }).catch((error) => {
+
+            setError(error.message);
+        })
+    }
+
+    const handelGithubSingIn = () => {
+
+        GithubLogin().then((result) => {
+
+            const user = result.user;
+            console.log(user);
+            setLogain(true);
+            setError('');
+            navigate(form, { replace: true });
+        }).catch((error) => {
+
+            setError(error.message);
+        })
     }
     return (
         <div className='w-50 m-auto'>
@@ -49,11 +81,16 @@ const Login = () => {
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <p>Please Register Your Account Info <Link to='/register'>Register</Link></p>
+                    <p className='text-danger'>Please Register Your Account Info <Link to='/register'>Register</Link></p>
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="outline-danger" className='pl-3 fs-5' type="submit">
                     Login
                 </Button>
+
+                <Form.Group className='mt-3'>
+                    <><Button onClick={handelGoogleSignIn} className='me-3 mt-3 fs-5' variant="outline-danger"> <FaGoogle></FaGoogle>  Login-With-Google</Button>
+                        <Button onClick={handelGithubSingIn} className='mt-3 fs-5' variant="outline-danger"> <FaGithub></FaGithub>  Login-With-GitHub</Button></>
+                </Form.Group>
 
                 <Form.Text className='fs-3 text-success'> {login ? 'Successfuly-Login' : ''}</Form.Text>
 

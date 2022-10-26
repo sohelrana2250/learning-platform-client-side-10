@@ -25,6 +25,14 @@ const Header = () => {
     const notify = () => toast(user?.displayName);
 
 
+    const handelDarkLightMode = () => {
+
+
+
+
+    }
+
+
 
     return (
         <div>
@@ -58,7 +66,7 @@ const Header = () => {
                             </>}
 
                             <Nav.Link eventKey={2} href="#memes">
-                                Theme
+                                <Button variant="outline-primary" onClick={handelDarkLightMode}>  dark/Light</Button>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
