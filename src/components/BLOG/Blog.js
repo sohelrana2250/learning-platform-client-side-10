@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Accordion } from 'react-bootstrap';
-import CardHeader from 'react-bootstrap/esm/CardHeader';
+// import CardHeader from 'react-bootstrap/esm/CardHeader';
 import './Blog.css'
 
 const Blog = () => {
@@ -40,11 +40,21 @@ const Blog = () => {
                                 <Accordion.Header> Why are you using firebase? What other options do you have to implement authentication?</Accordion.Header>
                                 <Accordion.Body>
                                     <Card.Text className='fs-5'>
-                                        Use useRef if you need to manage focus, text selection, trigger imperative animations or integrating third-party libraries.
 
-                                        useRef returns a mutable ref object whose .current property is initialized to the passed argument  initialValue. The returned object will persist for the full lifetime of the component. Essentially, useRef is like a “box” that can hold a mutable value in its .current property.
 
-                                        useRef can be used to store local mutable value in a component. It doesn't participate in rerendering (unline state data). useMemo is used to memoize (like we do in Dynamic Programming, concept wise) and skip recalculation.
+                                        Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.
+
+                                        <Card.Text>
+                                            1. On this page.
+                                            2.  Add and initialize the 3. Authentication SDK.
+                                            3. Prototype and test with Firebase Local Emulator Suite.
+                                            4.  Sign up new users.
+                                            5.   Sign in existing users.
+                                            6.   Set an authentication state observer and get user data.
+                                            7. Next steps.
+
+                                            Firebase Authentication aims to make building secure authentication systems easy, while improving the sign-in and onboarding experience for end users. It provides an end-to-end identity solution, supporting email and password accounts, phone auth, and Google, Twitter, Facebook, and GitHub login, and more.
+                                        </Card.Text>
                                     </Card.Text>
 
 
