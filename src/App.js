@@ -7,6 +7,9 @@ import Course from './components/Course/Course';
 import AuthProvider from './AuthProvider/AuthProvider';
 import CourseDetails from './components/CourseDetails/CourseDetails';
 import DynamicAllCourseData from './components/DynamicAllCourseData/DynamicAllCourseData';
+import Login from './components/Logain/Login';
+import Register from './components/Register/Register';
+import PrivateRouter from './components/PrivateRouter/PrivateRouter';
 
 
 
@@ -39,12 +42,18 @@ function App() {
         },
         {
           path: '/AllCourse/:id',
-          element: <DynamicAllCourseData></DynamicAllCourseData>,
+          element: <PrivateRouter><DynamicAllCourseData></DynamicAllCourseData></PrivateRouter>,
           loader: (props) => {
             const CourseId = props.params.id;
             const CourseReplace = CourseId.replace(":", "")
             return fetch(`https://b610-lerning-platform-server-side-one.vercel.app/CourseDetails/${CourseReplace}`);
           }
+        },
+        {
+          path: '/login', element: <Login></Login>
+        },
+        {
+          path: '/register', element: <Register></Register>
         }
 
       ]

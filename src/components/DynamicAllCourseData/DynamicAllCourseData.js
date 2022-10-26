@@ -8,7 +8,7 @@ const DynamicAllCourseData = () => {
 
 
     const dynamicDetails = useLoaderData();
-    console.log(dynamicDetails);
+    //console.log(dynamicDetails);
 
     const { CourseHeader, CourseTopic, courseBody, image } = dynamicDetails;
 

@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaAngellist } from "react-icons/fa";
 import icon from '../../Images/icon.jfif'
 import { Container, Nav, Navbar, Button, Image } from 'react-bootstrap';
 import './Header.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import toast, { Toaster } from 'react-hot-toast';
+
+
 const Header = () => {
+
+
+    const { user, logOut } = useContext(AuthContext);
+
+    // console.log(user?.photoURL);
+    // console.log(user?.displayName);
+
+    const handelLogOut = () => {
+
+        logOut().then(() => { }).catch((error) => { })
+    }
+
+
+    const notify = () => toast(user?.displayName);
+
 
 
     return (
@@ -21,9 +40,23 @@ const Header = () => {
                             <Nav.Link> FAQ</Nav.Link>
                             <Nav.Link> Blog</Nav.Link>
 
+
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#deets">More deets</Nav.Link>
+                            {user?.uid ? <>
+
+                                <div>
+                                    <spam className='text-danger mb-3'>{user.displayName}</spam>
+                                    <Image onMouseOver={notify} className='icon m-3' src={user?.photoURL} alt="" />
+                                    <Toaster />
+                                    <Button variant="outline-danger" onClick={handelLogOut}>Log-Out</Button>
+                                </div>
+
+                            </> : <>
+                                <Nav.Link><Link to='/login'>Login</Link></Nav.Link>
+                                <Nav.Link><Link to='/register'>Register</Link></Nav.Link>
+                            </>}
+
                             <Nav.Link eventKey={2} href="#memes">
                                 Theme
                             </Nav.Link>

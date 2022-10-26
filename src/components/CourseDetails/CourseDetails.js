@@ -8,7 +8,7 @@ const CourseDetails = () => {
 
 
     const courseDetais = useLoaderData();
-    console.log(courseDetais);
+    // console.log(courseDetais);
     const { CourseHeader, CourseTopic, courseBody, image } = courseDetais;
 
     const studyStep = CourseTopic.map((v, index) => {

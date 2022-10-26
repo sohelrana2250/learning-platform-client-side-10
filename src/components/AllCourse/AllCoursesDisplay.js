@@ -7,7 +7,7 @@ import './AllCourse.css'
 
 const AllCoursesDisplay = (props) => {
 
-    console.log(props.details);
+    //console.log(props.details);
     const { id, image, CourseHeader } = props.details;
     return (
         <div>
